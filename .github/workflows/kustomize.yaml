@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
 
 env:
-  RG_NAME: "RG-AKS-Lab-11"
-  CLUSTER_NAME: "AKS-Lab-11"
+  RG_NAME: "RG-AKS-Lab-11-clement"
+  CLUSTER_NAME: "AKS-Lab-11-clement"
 
 
 jobs:
@@ -40,6 +40,6 @@ jobs:
           cd ./Lab_11/Manifest/ && kubectl kustomize ./base
 
       - name: Application de la configuration
-        run: echo il ne reste plus ... !
+        run: kubectl apply -k base
            
               
